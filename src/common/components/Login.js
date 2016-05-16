@@ -55,9 +55,9 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  username: PropTypes.string.isRequired,
+  //username: PropTypes.string.isRequired,
   password: PropTypes.string,
-  logged: PropTypes.bool.isRequired,
+  //logged: PropTypes.bool.isRequired,
   token: PropTypes.string,
   err: PropTypes.object
 };
