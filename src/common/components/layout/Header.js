@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
-import LeftNav from 'material-ui/lib/left-nav';
+import LeftNav from 'material-ui/Drawer';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import AppBar from 'material-ui/lib/app-bar';
-import RaisedButton from 'material-ui/lib/raised-button';
-import MenuItem from 'material-ui/lib/menus/menu-item';
-import IconButton from 'material-ui/lib/icon-button';
+import AppBar from 'material-ui/AppBar';
+import RaisedButton from 'material-ui/RaisedButton';
+import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
 import Helmet from 'react-helmet';
-import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import ThemeManager from 'material-ui/styles/ThemeManager';
 import PersonalTheme from '../../themes/personal';
 import { bindActionCreators } from 'redux';
 

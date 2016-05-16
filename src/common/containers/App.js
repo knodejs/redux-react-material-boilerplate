@@ -9,7 +9,7 @@ import * as UserActions from '../actions/user';
 import Helmet from 'react-helmet';
 import Home from '../components/Home'
 import Header from '../components/layout/Header'
-import Paper from 'material-ui/lib/paper';
+import Paper from 'material-ui/Paper';
 import cookie from 'react-cookie';
 
 
