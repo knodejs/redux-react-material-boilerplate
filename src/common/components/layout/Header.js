@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import LeftNav from 'material-ui/Drawer';
+import Drawer from 'material-ui/Drawer';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 import AppBar from 'material-ui/AppBar';
@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Helmet from 'react-helmet';
-import ThemeManager from 'material-ui/styles/ThemeManager';
+import ThemeManager from 'material-ui/styles/themeManager';
 import PersonalTheme from '../../themes/personal';
 import { bindActionCreators } from 'redux';
 
@@ -16,16 +16,15 @@ import * as UserActions from '../../actions/user';
 
 class Header extends Component {
 
-constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {open: true};
     this.handleToggle = this.handleToggle.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
-
-    handleLogout() {
+  handleLogout() {
         this.props.logout(this.props.user);
-    }
+  }
 
 	handleToggle() {
 		console.log('blabla');
@@ -44,7 +43,7 @@ constructor(props) {
               <a target="_blank" href="http://www.material-ui.com/#/components/app-bar"><IconButton iconStyle={{color: '#fff'}} iconClassName="fa fa-rocket"></IconButton></a>
               </div>}
           />
-          <LeftNav style={{paddingTop:'70px'}} open={this.state.open}>
+          <Drawer style={{paddingTop:'70px'}} open={this.state.open}>
               <Link to="/home"><MenuItem>Home Page</MenuItem></Link>
               {!user.info && <Link to="/login"><MenuItem>Login</MenuItem></Link>}
               {!user.info && <Link to="/register"><MenuItem>Register</MenuItem></Link>}
@@ -53,7 +52,7 @@ constructor(props) {
 
               <Link to="/about"><MenuItem secondaryText="&#8984;B">About</MenuItem></Link>
               {user.info && <MenuItem onClick={this.handleLogout}>Logout</MenuItem>}
-          </LeftNav>
+          </Drawer>
       </div>
     );
   }
